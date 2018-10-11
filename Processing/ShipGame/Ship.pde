@@ -1,6 +1,6 @@
 class Ship {
   int x = 200;
-  int y = 200;
+  int y = 760;
   int val;
 
   void show() {
@@ -11,13 +11,7 @@ class Ship {
   }
 
   void update() {
-    if (keyPressed == true) {
-      if (key == 'a') {
-        this.x -= 5;
-      }
-      if (key == 'd') {
-        this.x += 5;
-      }
-    }
+    this.x = mouseX;
+    this.x = constrain(this.x, 50, 630);
   }
 }
